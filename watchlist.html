@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>Movie Watchlist</title>
+        <script>
+            // onlick func not throwing error if put in a .js file
+            function toggleWatchlist(id){
+                let local = localStorage.getItem("watchlist").split(",")
+                const indexToRemove = local.findIndex(mov => mov === id)
+                const removedMov = local.splice(indexToRemove, 1)
+                localStorage.setItem("watchlist", local.join())
+                location.reload()
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="page-title">
+                    <h1>My Watchlist</h1>
+                    <a href="./index.html">Search for movies</a>
+                </nav>
+                <div class="search-bar" style="display: none;">
+                    <p>🔍</p>
+                    <input id="search-field" type="text" placeholder="Search for a movie">
+                    <button id="search-btn">Search</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container initial-data" id="movie-container">
+                <div id="empty-watchlist">
+                    <p class="error">Your watchlist is looking a little empty...</p>
+                    <p class="add-some-movies">
+                        <a href="./index.html">➕ Let’s add some movies!</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="footer">Made with 🤍 by <a href="https://github.com/nzabajp" target="_blank">/nzabajp</a></p>
+        </footer>
+        <script src="./js/watchlist.js" type="module"></script>
+    </body>
+</html>

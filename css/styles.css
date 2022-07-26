@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Typography */
+
+.page-title h1,
+.page-title a {
+    color: #fff;
+}
+
+.page-title h1 {
+    font-size: 2.625rem;
+    letter-spacing: -0.045em;
+    font-weight: 800;
+}
+
+.page-title a,
+.error,
+.add-some-movies a {
+    font-weight: 700;
+}
+
+.add-some-movies a,
+footer a,
+.page-title a {
+    text-decoration: none;
+}
+
+.search-bar input,
+.search-bar input::placeholder,
+.search-bar button,
+.movie-body p,
+.add-some-movies a {
+    font-size: .875rem;
+}
+
+.search-bar input,
+.search-bar input::placeholder,
+.search-bar button,
+.movie-title h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.search-bar input,
+.search-bar input::placeholder {
+    color: #6b7280;
+}
+
+.search-bar button {
+    color: #374151;
+}
+
+.movie-title h3,
+.error {
+    font-size: 1.125rem;
+}
+.movie-title p,
+.movie-info p,
+.movie-info button {
+    font-size: .75rem;
+    color: #111827;
+}
+
+.error,
+.add-some-movies {
+    text-align: center;
+    margin: 0;
+}
+
+.error {
+    color: #DFDDDD;
+}
+
+.add-some-movies a,
+footer a {
+    color: #363636;
+}
+
+footer p,
+.movie-body p {
+    color: #6B7280;
+
+}
+
+
+/* Layout */
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+header .container {
+    /* min-height: 25vh; */
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-color: #0E0E0E;
+    background-image: url("../images/header.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    background-color: #fff;
+    height: 2.5em;
+    display: flex;
+    position: relative;
+    /* top: 5vh; */
+    top: 35px;
+}
+.search-bar p {
+    margin: 0;
+    align-self: center;
+    text-align: center;
+    flex: 1;
+}
+.search-bar input {
+    border: none;
+    flex: 10;
+}
+.search-bar button {
+    flex: 3;
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    border-radius: 0px 6px 6px 0px;
+}
+.search-bar button:hover {
+    background-color: #dee2e7;
+    cursor: pointer;
+}
+.search-bar button:active {
+    transform: scale(.95);
+}
+
+main .container {
+    margin: 5em auto;
+    min-height: 50vh;
+}
+
+.initial-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.movie-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.5em 0;
+    border-bottom: 1.5px solid #e5e7eb;
+    min-height: 150px;
+}
+
+.movie-card img {
+    width: 25%;
+}
+.movie-card .movie-content {
+    width: 75%;
+
+}
+
+.movie-content div {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding-right: 3em;
+}
+
+.movie-info p {
+    margin: 0;
+}
+.movie-info button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.movie-info button:hover,
+.movie-info button:focus {
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #F9FAFB;
+    box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* media queries */
+
+@media (max-width: 320px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .search-bar {
+        top: 62px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .search-bar {
+        top: 55px;
+    }
+
+    .movie-card {
+        gap: 1em;
+    }
+
+    .movie-content div {
+        gap: 1em;
+        padding-right: 1em;
+    }
+}
