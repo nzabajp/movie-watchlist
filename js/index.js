@@ -3,7 +3,7 @@ const searchBtn = document.getElementById("search-btn")
 const movieContainer = document.getElementById("movie-container")
 const initialImage = document.getElementById("initial-image")
 
-const url = `http://www.omdbapi.com/?apikey=285af6b1`
+const url = `https://www.omdbapi.com/?apikey=285af6b1`
 const title = `&t=`
 let searchResultList = []
 
