@@ -5,7 +5,6 @@ const initialImage = document.getElementById("initial-image")
 
 const url = `https://www.omdbapi.com/?apikey=285af6b1`
 const title = `&t=`
-let searchResultList = []
 
 //initialize localStorage "watchlist" key
 let local = localStorage.getItem("watchlist")
@@ -19,8 +18,6 @@ searchField.addEventListener("click", () => searchField.select())
 
 //uses fetch to GET list of movies from the search input
 function getListOfNames() {
-    console.log(searchField.value)
-
     movieContainer.innerHTML = ""
     movieContainer.classList.remove("initial-data")
     initialImage.style.display = "none"
@@ -39,14 +36,12 @@ function getListOfNames() {
 
 //gets list of names array, maps through it and gets full details of the movies
 function getFullDetails(arr, parameter) {
-    console.log(arr)
     arr.map(name => {
         if(name) {
             fetch(`${url}${parameter}${name}`)
                 .then(res => res.json())
                 .then(data => {
                     renderToDom(data)
-                    console.log(searchResultList)
                 })
         }
     })

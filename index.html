@@ -13,7 +13,6 @@
                 if(!isOnLocal) {
                     local.push(id)
                     localStorage.setItem("watchlist", local.join())
-                    console.log(id)
                     document.getElementById(id).disabled = true
                     document.getElementById(id).textContent = "Added to wishlist"
                     setTimeout(() => {
