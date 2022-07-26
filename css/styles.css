@@ -228,7 +228,7 @@ footer {
 
 /* media queries */
 
-@media (max-width: 320px) {
+@media (max-width: 324px) {
     :root {
         font-size: 10px;
     }
@@ -236,11 +236,15 @@ footer {
     .search-bar {
         top: 62px;
     }
+
+    .movie-content div {
+        padding-right: 0;
+    }
 }
 
-@media (min-width: 321px) and (max-width: 600px) {
+@media (min-width: 324px) and (max-width: 600px) {
     :root {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .search-bar {
@@ -253,6 +257,6 @@ footer {
 
     .movie-content div {
         gap: 1em;
-        padding-right: 1em;
+        padding-right: 0.5em;
     }
 }
