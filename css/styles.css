@@ -46,7 +46,7 @@ footer a,
 .search-bar button,
 .movie-body p,
 .add-some-movies a {
-    font-size: .875rem;
+    font-size: 1rem;
 }
 
 .search-bar input,
@@ -133,7 +133,7 @@ header {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     background-color: #fff;
-    height: 2.5em;
+    height: 5em;
     display: flex;
     position: relative;
     /* top: 5vh; */
