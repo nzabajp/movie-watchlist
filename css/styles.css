@@ -228,7 +228,7 @@ footer {
 
 /* media queries */
 
-@media (max-width: 350px) {
+@media (max-width: 370px) {
     :root {
         font-size: 10px;
     }
@@ -242,7 +242,7 @@ footer {
     }
 }
 
-@media (min-width: 350px) and (max-width: 600px) {
+@media (min-width: 370px) and (max-width: 600px) {
     :root {
         font-size: 13px;
     }
