@@ -193,11 +193,11 @@ main .container {
 
 }
 
-.movie-content div {
+.movie-content > div {
     display: flex;
     align-items: center;
     gap: 2em;
-    padding-right: 3em;
+    padding-right: 1em;
 }
 
 .movie-info p {
